@@ -1,0 +1,82 @@
+<div class="page-shell">
+  <section class="hero-card">
+    <p class="eyebrow"><%= @site["eyebrow"] %></p>
+    <h1><%= @site["headline"] %></h1>
+    <p class="subheadline"><%= @site["subheadline"] %></p>
+
+    <div class="hero-actions">
+      <a href="<%= @site["primary_cta_link"] || "#onboarding" %>" class="primary-btn">
+        <%= @site["primary_cta_label"] %>
+      </a>
+      <a href="<%= @site["secondary_cta_link"] || "#pricing" %>" class="secondary-btn">
+        <%= @site["secondary_cta_label"] %>
+      </a>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <div class="section-header">
+      <h2>Enabled Features</h2>
+      <p>These sections are controlled by the business spec.</p>
+    </div>
+
+    <div class="feature-grid">
+      <% @features.each do |key, value| %>
+        <div class="feature-badge <%= value ? "enabled" : "disabled" %>">
+          <span class="feature-name"><%= key.to_s.humanize %></span>
+          <span class="feature-status"><%= value ? "ON" : "OFF" %></span>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <% if @features["show_pricing"] %>
+    <section class="section-card" id="pricing">
+      <div class="section-header">
+        <h2>Pricing</h2>
+        <p><%= @pricing["description"] %></p>
+      </div>
+
+      <div class="pricing-card">
+        <p class="pricing-plan"><%= @pricing["plan_name"] %></p>
+        <p class="pricing-amount">
+          <%= @pricing["currency"] %> <%= @pricing["monthly_price"] %>
+          <span>/ <%= @pricing["billing_period"] %></span>
+        </p>
+      </div>
+    </section>
+  <% end %>
+
+  <div class="two-column-grid">
+    <% if @features["show_approval_threshold"] %>
+      <section class="section-card">
+        <div class="section-header">
+          <h2>Approval Threshold</h2>
+          <p>Current business rule from the spec.</p>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-value"><%= @workflow["approval_threshold"] %></span>
+        </div>
+      </section>
+    <% end %>
+
+    <% if @features["show_onboarding"] %>
+      <section class="section-card" id="onboarding">
+        <div class="section-header">
+          <h2>Onboarding Steps</h2>
+          <p>Checklist rendered directly from YAML.</p>
+        </div>
+
+        <ol class="steps-list">
+          <% Array(@workflow["onboarding_steps"]).each_with_index do |step, index| %>
+            <li>
+              <span class="step-number"><%= index + 1 %></span>
+              <span class="step-text"><%= step %></span>
+            </li>
+          <% end %>
+        </ol>
+      </section>
+    <% end %>
+  </div>
+</div>
