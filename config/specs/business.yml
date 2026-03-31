@@ -1,0 +1,29 @@
+site:
+  title: "Spec Driven Demo"
+  eyebrow: "Business Spec Driven UI"
+  headline: "Welcome to the spec-driven Rails app"
+  subheadline: "This page is controlled by a business spec file. Update the YAML to change the UI content and business rules."
+  primary_cta_label: "Get Started"
+  primary_cta_link: "#onboarding"
+  secondary_cta_label: "View Pricing"
+  secondary_cta_link: "#pricing"
+
+features:
+  show_pricing: true
+  show_onboarding: true
+  show_approval_threshold: true
+
+pricing:
+  plan_name: "Starter"
+  monthly_price: 499
+  currency: "PHP"
+  billing_period: "month"
+  description: "A simple starter plan for testing spec-driven business rules."
+
+workflow:
+  approval_threshold: 10000
+  onboarding_steps:
+    - "Create account"
+    - "Verify email"
+    - "Complete profile"
+    - "Book onboarding call"
