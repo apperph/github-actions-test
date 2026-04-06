@@ -8,7 +8,7 @@ servers:
 
 proxy:
   ssl: false
-  host: 52.77.159.239
+  host: 13.213.250.166
 
 registry:
   server: ghcr.io
