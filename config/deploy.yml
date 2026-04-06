@@ -21,6 +21,7 @@ builder:
 
 env:
   clear:
+    PORT: 80
     RAILS_ENV: production
   secret:
     - RAILS_MASTER_KEY
