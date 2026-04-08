@@ -28,3 +28,5 @@ env:
 
 ssh:
   user: ubuntu
+  keys_only: true
+  config: false
