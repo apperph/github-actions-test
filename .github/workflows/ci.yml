@@ -19,7 +19,7 @@ jobs:
           bundler-cache: true
 
       - name: Validate business spec
-        run: bin/rails specs:validate
+        run: bundle exec rake specs:validate
 
       - name: Run tests
         run: bin/rails test
