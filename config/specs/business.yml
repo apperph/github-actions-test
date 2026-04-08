@@ -1,9 +1,7 @@
 site:
-  title: "Spec Driven Demo"
-  eyebrow: "Business Spec Driven UI"
-  headline: "Welcome to the spec-driven Rails app"
-  subheadline: "This page is controlled by a business spec file. Update the YAML to change the UI content and business rules."
-  primary_cta_label: "Get Started"
+  title: "Spec Driven App"
+  headline: "🚀 NEW HEADLINE FROM YAML"
+  primary_cta_label: "Try Now" 
   primary_cta_link: "#onboarding"
   secondary_cta_label: "View Pricing"
   secondary_cta_link: "#pricing"
