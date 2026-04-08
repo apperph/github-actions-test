@@ -85,10 +85,5 @@ jobs:
           KAMAL_REGISTRY_PASSWORD=${{ secrets.GHCR_TOKEN }}
           EOF
 
-      - name: Run spec sync
-        run: bundle exec rails specs:sync
-        env:
-          RAILS_ENV: production
-
       - name: Deploy with Kamal
         run: bundle exec kamal deploy
