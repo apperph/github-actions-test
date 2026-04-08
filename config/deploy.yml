@@ -4,7 +4,7 @@ image: ghcr.io/apperph/github-actions-test
 
 servers:
   web:
-    - rails-test-lightsail
+    - 13.213.250.166
 
 proxy:
   ssl: false
