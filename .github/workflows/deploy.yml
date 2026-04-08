@@ -72,7 +72,7 @@ jobs:
           chmod 600 ~/.ssh/lightsail_key
 
           ssh-keygen -R "${{ vars.LIGHTSAIL_HOST }}" || true
-          ssh-keyscan -H "${{ vars.LIGHTSAIL_HOST }}" >> ~/.ssh/known_hosts
+	  ssh-keyscan "${{ vars.LIGHTSAIL_HOST }}" >> ~/.ssh/known_hosts
 
           cat > ~/.ssh/config <<EOF
           Host ${{ vars.LIGHTSAIL_HOST }}
