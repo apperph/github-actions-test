@@ -1,8 +1,8 @@
+require "yaml"
+
 namespace :specs do
   desc "Validate business spec files"
   task validate: :environment do
-    require "yaml"
-
     spec_file = Rails.root.join("config/specs/business.yml")
     data = YAML.load_file(spec_file)
 
@@ -16,18 +16,10 @@ namespace :specs do
 
   desc "Sync business spec into app state"
   task sync: :environment do
-    require "yaml"
-
     spec_file = Rails.root.join("config/specs/business.yml")
-    data = YAML.load_file(spec_file)
+    YAML.load_file(spec_file)
 
     puts "Applying business spec..."
-
-    # Example placeholders:
-    # Setting.set("headline", data.dig("site", "headline"))
-    # Setting.set("primary_cta_label", data.dig("site", "primary_cta_label"))
-    # Setting.set("plan_name", data.dig("pricing", "plan_name"))
-
     puts "Business spec applied"
   end
 end
