@@ -1,6 +1,7 @@
 site:
   title: "Spec Driven App"
   headline: "🚀 NEW HEADLINE FROM YAML"
+  subheadline: 3rd business specs edit test
   primary_cta_label: "Try Now" 
   primary_cta_link: "#onboarding"
   secondary_cta_label: "View Pricing"
