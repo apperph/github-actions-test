@@ -70,9 +70,8 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.LIGHTSAIL_SSH_KEY }}" > ~/.ssh/lightsail_key
           chmod 600 ~/.ssh/lightsail_key
-
           ssh-keygen -R "${{ vars.LIGHTSAIL_HOST }}" || true
-	  ssh-keyscan "${{ vars.LIGHTSAIL_HOST }}" >> ~/.ssh/known_hosts
+          ssh-keyscan "${{ vars.LIGHTSAIL_HOST }}" >> ~/.ssh/known_hosts
 
           cat > ~/.ssh/config <<EOF
           Host ${{ vars.LIGHTSAIL_HOST }}
