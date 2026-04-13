@@ -1,7 +1,7 @@
-# Spec-Driven Rails App Deployment (End-to-End Documentation)
+# Spec-Driven Rails App Development and Deployment (End-to-End Documentation)
 
 ## Overview
-This document outlines the complete end-to-end process of building, containerizing, and deploying a Ruby on Rails 8 application using Docker and Kamal on an Amazon Lightsail instance.
+This document outlines the complete end-to-end process of developing, building, containerizing, and deploying a Ruby on Rails 8 application using Docker and Kamal on an Amazon Lightsail instance.
 
 ---
 
